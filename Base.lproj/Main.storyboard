@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="BrightSkyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LV9-v2-PSl">
+                                <rect key="frame" x="0.0" y="12.666666666666686" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellID" rowHeight="100" id="bc7-sT-FcT" customClass="TableViewCell" customModule="BrightSkyApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bc7-sT-FcT" id="C8R-q6-c20">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="wxX-QI-n4u">
+                                                    <rect key="frame" x="283" y="5" width="90" height="90"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="0ac-iY-IBB"/>
+                                                        <constraint firstAttribute="width" secondItem="wxX-QI-n4u" secondAttribute="height" id="czu-f0-fwe"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Circle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwJ-CH-xUT">
+                                                    <rect key="frame" x="19.999999999999993" y="27" width="93.333333333333314" height="46"/>
+                                                    <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MwJ-CH-xUT" firstAttribute="centerY" secondItem="C8R-q6-c20" secondAttribute="centerY" id="Etf-g1-Fna"/>
+                                                <constraint firstItem="wxX-QI-n4u" firstAttribute="centerY" secondItem="C8R-q6-c20" secondAttribute="centerY" id="Wkd-5G-Dm5"/>
+                                                <constraint firstItem="MwJ-CH-xUT" firstAttribute="leading" secondItem="C8R-q6-c20" secondAttribute="leading" constant="20" id="YbM-Es-Oqc"/>
+                                                <constraint firstItem="wxX-QI-n4u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MwJ-CH-xUT" secondAttribute="trailing" id="eU5-P0-PSL"/>
+                                                <constraint firstAttribute="trailing" secondItem="wxX-QI-n4u" secondAttribute="trailing" constant="20" id="tEM-ax-Tcu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="shapeImageLabel" destination="wxX-QI-n4u" id="v1T-Ai-NQt"/>
+                                            <outlet property="shapeNameLabel" destination="MwJ-CH-xUT" id="E4D-8j-wNI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LAo-SM-pns"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="iUk-KE-1TO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LV9-v2-PSl" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="D3r-4R-BOU"/>
+                            <constraint firstItem="LV9-v2-PSl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gio-Cy-RaH"/>
+                            <constraint firstItem="LV9-v2-PSl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="hHV-O3-vFB"/>
+                            <constraint firstItem="LV9-v2-PSl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nub-Fy-vpa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="shapeTableView" destination="LV9-v2-PSl" id="rH4-JN-dUn"/>
+                        <segue destination="bQn-TO-iMJ" kind="show" identifier="detailSegue" id="dbe-fR-8hd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-785" y="-113"/>
+        </scene>
+        <!--Table View Detail-->
+        <scene sceneID="Ss6-ug-JMx">
+            <objects>
+                <viewController id="bQn-TO-iMJ" customClass="TableViewDetail" customModule="BrightSkyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pr6-ZX-9xt">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXf-f4-55b">
+                                <rect key="frame" x="126" y="20" width="141" height="46"/>
+                                <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="SpN-Gi-M3n">
+                                <rect key="frame" x="10" y="234.66666666666663" width="373" height="373"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SpN-Gi-M3n" secondAttribute="height" id="gUf-l9-Wgn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pPx-v9-oTz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WXf-f4-55b" firstAttribute="top" secondItem="pPx-v9-oTz" secondAttribute="top" constant="20" id="1iW-Qr-ma9"/>
+                            <constraint firstItem="WXf-f4-55b" firstAttribute="centerX" secondItem="pPx-v9-oTz" secondAttribute="centerX" id="5ZD-gd-6aB"/>
+                            <constraint firstItem="SpN-Gi-M3n" firstAttribute="centerX" secondItem="pPx-v9-oTz" secondAttribute="centerX" id="HTK-Yo-Re5"/>
+                            <constraint firstItem="SpN-Gi-M3n" firstAttribute="centerY" secondItem="pPx-v9-oTz" secondAttribute="centerY" id="Id8-PJ-sCi"/>
+                            <constraint firstItem="pPx-v9-oTz" firstAttribute="trailing" secondItem="SpN-Gi-M3n" secondAttribute="trailing" constant="10" id="bZG-Y2-f4q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MnJ-oe-Gwk"/>
+                    <connections>
+                        <outlet property="image" destination="SpN-Gi-M3n" id="c4V-E1-spa"/>
+                        <outlet property="name" destination="WXf-f4-55b" id="HW6-4a-geR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fHN-c0-yxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5.343511450381679" y="-113.38028169014085"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle" width="500" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
