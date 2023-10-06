@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JbH-LD-Ptq">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Shapes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="BrightSkyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LV9-v2-PSl">
-                                <rect key="frame" x="0.0" y="12.666666666666686" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="34.666666666666686" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCellID" rowHeight="100" id="bc7-sT-FcT" customClass="TableViewCell" customModule="BrightSkyApp" customModuleProvider="target">
@@ -70,6 +70,7 @@
                             <constraint firstItem="LV9-v2-PSl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="nub-Fy-vpa"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Shapes" id="H9I-Qc-Ufn"/>
                     <connections>
                         <outlet property="shapeTableView" destination="LV9-v2-PSl" id="rH4-JN-dUn"/>
                         <segue destination="bQn-TO-iMJ" kind="show" identifier="detailSegue" id="dbe-fR-8hd"/>
@@ -77,24 +78,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-785" y="-113"/>
+            <point key="canvasLocation" x="141.22137404580153" y="-113.38028169014085"/>
         </scene>
-        <!--Table View Detail-->
+        <!--Detail-->
         <scene sceneID="Ss6-ug-JMx">
             <objects>
                 <viewController id="bQn-TO-iMJ" customClass="TableViewDetail" customModule="BrightSkyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pr6-ZX-9xt">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXf-f4-55b">
-                                <rect key="frame" x="126" y="20" width="141" height="46"/>
+                                <rect key="frame" x="126" y="123" width="141" height="46"/>
                                 <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" translatesAutoresizingMaskIntoConstraints="NO" id="SpN-Gi-M3n">
-                                <rect key="frame" x="10" y="234.66666666666663" width="373" height="373"/>
+                                <rect key="frame" x="10" y="274" width="373" height="373"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SpN-Gi-M3n" secondAttribute="height" id="gUf-l9-Wgn"/>
                                 </constraints>
@@ -110,7 +111,7 @@
                             <constraint firstItem="pPx-v9-oTz" firstAttribute="trailing" secondItem="SpN-Gi-M3n" secondAttribute="trailing" constant="10" id="bZG-Y2-f4q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MnJ-oe-Gwk"/>
+                    <navigationItem key="navigationItem" title="Detail" id="MnJ-oe-Gwk"/>
                     <connections>
                         <outlet property="image" destination="SpN-Gi-M3n" id="c4V-E1-spa"/>
                         <outlet property="name" destination="WXf-f4-55b" id="HW6-4a-geR"/>
@@ -118,7 +119,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHN-c0-yxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5.343511450381679" y="-113.38028169014085"/>
+            <point key="canvasLocation" x="921.37404580152668" y="-113.38028169014085"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BNK-YO-7fU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JbH-LD-Ptq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A0e-af-R9w">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dXh-Om-rYr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dnl-QU-4Qm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639" y="-113"/>
         </scene>
     </scenes>
     <resources>
